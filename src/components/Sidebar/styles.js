@@ -7,7 +7,7 @@ export const Container = styled.aside`
   overflow: hidden;
   padding: 0.5rem 0rem;
   
-  
+
   .profile {
     display: flex;
     flex-direction: column;

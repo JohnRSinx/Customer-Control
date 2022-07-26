@@ -1,23 +1,61 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
+  width: 50%;
   background: var(--pink-200);
   border-radius: 2px;
-  padding: 0.5rem 0rem;
+  padding: 0.5rem 0rem; 
+  margin-bottom: 0.5rem;
+  
 
+  @media (max-width:768px) {
+  width: 100%;
+}
+ 
+.contentHeader{
+  border-radius: 4px;
+  margin: 0.25rem 5rem;
+  padding: 0.25rem; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--pink-100);
+  color: var(--green-800);
+}
+time {
+  font-size: 1.25rem;
+}
+
+.trashButton{
+  padding: 0.25rem;
+  background: none;
+  border: none;
+  color: var(--green-800);
+  transition: background-color 0.1s;
+  
+
+  :hover {
+    background-color: var(--pink-400);
+  }
+}
 .infoClient {
   padding: 0.5rem 0.5rem
 }
 
 .categoryInfo {
+  align-items: center;
   display: flex;
   justify-content: space-between;
   padding: 0.25rem ;
   margin: 0.25rem;
-  border-radius: 2px;
-  background-color: var(--green-600);
-  color: var(--pink-200);
+  border-radius: 4px;
+  background-color: var(--pink-100);
+  color: var(--green-800);
+}
+
+h3 {
+  
+
 }
 .buttonEditor {
   background-color: var(--pink-200);
@@ -28,17 +66,8 @@ export const Container = styled.div`
   transition: background-color 0.1s;
   
   :hover {
-    background-color: var(--pink-100);
+    background-color: var(--pink-400);
   }
-}
-
-.buttonTrash {
-  
-}
-
-time {
-  display: flex;
-  justify-content: center;
 }
   
 `

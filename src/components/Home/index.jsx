@@ -6,7 +6,13 @@ export function Home() {
   return (
     <Wrapper>
         <Sidebar/>
-        <Cards/>
+        <div className="containerCards">
+          <Cards/>
+          <Cards/>
+          <Cards/> 
+          <Cards/>  
+          <Cards/>   
+        </div>
         
     </Wrapper>
   )

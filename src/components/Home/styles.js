@@ -10,7 +10,8 @@ export const Wrapper = styled.main`
   grid-template-columns: 256px 1fr;
   gap: 1rem;
   align-items: flex-start;
- 
+  
+  
   
 
   @media (max-width:768px) {

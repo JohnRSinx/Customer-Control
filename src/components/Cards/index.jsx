@@ -5,27 +5,31 @@ export function Cards() {
   return (
    <Container>
     <article>
-       <div>
+       <div className="contentHeader">
         <time>Horário - 15:00</time>
+        <button className="trashButton">
+          <Trash size={20}/>
+        </button>
+        
        </div>
     
       <div className="infoClient">
         <div className="categoryInfo">
-          <h1>Kauanny Victoria</h1>
+          <h3>Kauanny Victoria</h3>
           <button className="buttonEditor">
             <Pen size={20} />
           </button>
         </div>
         <div className="categoryInfo">
-          <h1>Desigin+Henna</h1> 
+          <h3>Desigin+Henna</h3> 
           <button className="buttonEditor">
             <Pen size={20} />
           </button>
         </div>
         <div className="categoryInfo">
-          <h1>
+          <h3>
             Valor: R$20
-          </h1>
+          </h3>
           <button className="buttonEditor">
               <Pen size={20} />
           </button>
