@@ -27,47 +27,7 @@ export function Sidebar({setCardData }) {
 
   return ( 
     <Container>
-      <div className="profile">
-        <img 
-          src={perfilFoto} 
-          alt="Foto de Thalita"
-        />
-        <strong>Thalita Couto</strong>
-
-        <form className="formRegister">
-          <h1>Dados da Cliente</h1>
-          <input 
-            onChange={handleChangeValues}
-            type="text"
-            name="name"
-            placeholder="Nome do Cliente"
-            className="inputName"
-          />
-          <input 
-            onChange={handleChangeValues}
-            type="date"
-            name="time"
-            className="inputName"
-          />
-          <input 
-            onChange={handleChangeValues}
-            type="text"
-            name="category"
-            placeholder="Procedimento"
-            className="inputName"
-          />
-          <input 
-            onChange={handleChangeValues}
-            type="number"
-            name="value"
-            placeholder="Valor"
-            className="inputName"
-          />
-          <button onClick={handleStorageCard}>
-            Adicionar
-          </button>
-        </form>
-      </div>
+      
       
     </Container>
   )

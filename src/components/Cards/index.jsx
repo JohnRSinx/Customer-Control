@@ -1,13 +1,30 @@
 import { Container } from "./styles";
 import { Trash , Pen} from "phosphor-react";
+import { FormDialog } from "../Dialog/Dialog";
+import {useState} from "react";
+
 
 export function Cards({content}) {
+  const [open, setOpen] = useState(false);
+  function handleClickCard () {
+    setOpen(true);
+  }
   return (
-   <Container>
-    <article>
+    <>
+    <FormDialog 
+    open={open} 
+    setOpen={setOpen}
+    content={content}
+    listCard={content.listCard}
+    setListCard={content.setListCard}
+    
+    
+    />
+    <Container>
+    <article onClick={()=>handleClickCard()}>
        <div className="contentHeader">
         <time>
-          {content.time}
+          Data{content.time}
         </time>
         <button className="trashButton">
           <Trash size={20}/>
@@ -31,7 +48,7 @@ export function Cards({content}) {
           </button>
         </div>
         <div className="categoryInfo">
-          <h3>{content.value}</h3>
+          <h3>R$ {content.value}</h3>
           <button className="buttonEditor">
               <Pen size={20} />
           </button>
@@ -39,5 +56,7 @@ export function Cards({content}) {
       </div>
     </article>
    </Container>
+    </>
+   
   )
 }
