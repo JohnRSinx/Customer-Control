@@ -24,34 +24,23 @@ export function Cards({content}) {
     <article onClick={()=>handleClickCard()}>
        <div className="contentHeader">
         <time>
-          Data{content.time}
+          Data {content.time}
         </time>
         <button className="trashButton">
-          <Trash size={20}/>
+          <Pen size={26} weight="fill" />
         </button>
-        
        </div>
-    
       <div className="infoClient">
         <div className="categoryInfo">
           <h3>
             {content.name}
             </h3>
-          <button className="buttonEditor">
-            <Pen size={20} />
-          </button>
         </div>
         <div className="categoryInfo">
-          <h3>{content.category}</h3> 
-          <button className="buttonEditor">
-            <Pen size={20} />
-          </button>
+          <h3>{content.category}</h3>
         </div>
         <div className="categoryInfo">
           <h3>R$ {content.value}</h3>
-          <button className="buttonEditor">
-              <Pen size={20} />
-          </button>
         </div>
       </div>
     </article>

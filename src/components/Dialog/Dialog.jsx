@@ -28,7 +28,8 @@ export function FormDialog({content ,open , setOpen , listCard , setListCard}) {
  }
   
  function handleDeleteCard (){
-  axios.delete(`http://localhost:3001/detele/${editeValues.id}`);
+  axios.delete(`http://localhost:3001/delete/${editeValues.id}`);
+  handleClose()
   
  }
   const handleClickOpen = () => {

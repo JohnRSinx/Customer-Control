@@ -6,12 +6,14 @@ export const Container = styled.div`
   border-radius: 2px;
   padding: 0.5rem 0rem; 
   margin-bottom: 0.5rem;
-  
+  :hover { background-color: var(--pink-400); }
 
   @media (max-width:768px) {
   width: 100%;
 }
- 
+article {
+  
+}
 .contentHeader{
   border-radius: 4px;
   margin: 0.25rem 5rem;
@@ -32,6 +34,7 @@ time {
   border: none;
   color: var(--green-800);
   transition: background-color 0.1s;
+  cursor: initial;
   
 
   :hover {
@@ -53,21 +56,5 @@ time {
   color: var(--green-800);
 }
 
-h3 {
-  
-
-}
-.buttonEditor {
-  background-color: var(--pink-200);
-  color: var(--green-800);
-  border: none;
-  border-radius: 2px;
-  padding: 0.25rem;
-  transition: background-color 0.1s;
-  
-  :hover {
-    background-color: var(--pink-400);
-  }
-}
   
 `
