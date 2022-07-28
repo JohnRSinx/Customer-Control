@@ -31,8 +31,6 @@ export function FormDialog({content ,open , setOpen , listCard , setListCard}) {
   axios.delete(`http://localhost:3001/detele/${editeValues.id}`);
   
  }
-console.log(editeValues.id)
-
   const handleClickOpen = () => {
     setOpen(true);
   };
