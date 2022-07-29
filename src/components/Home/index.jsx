@@ -15,21 +15,23 @@ export function Home() {
     value : "",
   });
 
-  const [listClient, setListClient] = useState();
+  const [listClient, setListClient] = useState([]);
 
 
-
+//Pega os dados do banco de dados
   useEffect(()=>{
     Axios.get("http://localhost:3001/getCards").then((response)=> {
       setListClient(response.data);
     })
-  },[])
+  },[listClient])
 
- 
+ //Armazena o que vem do input
   function handleStorageCard ({target}) { 
     setStorageInput({...storageInput,[target.name]:target.value});
    
   }
+
+  //Faz a aquisição para o back informando os dados do Estado
   function handleClickSalve() {
     event.preventDefault();
     Axios.post("http://localhost:3001/register", {
